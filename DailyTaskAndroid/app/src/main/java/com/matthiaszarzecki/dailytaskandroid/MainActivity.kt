@@ -12,7 +12,6 @@ import android.view.MenuItem
 import com.matthiaszarzecki.dailytaskandroid.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
@@ -29,8 +28,10 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
 
         binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+            Snackbar
+                .make(view, "Hello! You sure pressed that button.", Snackbar.LENGTH_LONG)
+                .setAction("Action", null)
+                .show()
         }
     }
 
